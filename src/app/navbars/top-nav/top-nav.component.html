@@ -1,0 +1,12 @@
+<nav class="navbar sticky-top navbar" style="background-color: #441777">
+  <div class="d-flex align-items-center">
+    <i
+      class="bi bi-list text-white fs-3 mr-4"
+      (click)="toggleSidebar()"
+      style="cursor: pointer"
+    ></i>
+    <h3 class="text-white font-weight-bold m-0">V C</h3>
+  </div>
+</nav>
+
+<app-side-nav [isSidebarOpen]="isSidebarOpen"></app-side-nav>
