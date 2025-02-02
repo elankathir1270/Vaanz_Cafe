@@ -1,18 +1,12 @@
-import { Component } from '@angular/core';
-import { SideNavComponent } from '../side-nav/side-nav.component';
-import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   standalone: true,
   selector: 'app-top-nav',
-  imports: [SideNavComponent],
+  imports: [],
   templateUrl: './top-nav.component.html',
   styleUrl: './top-nav.component.css',
 })
 export class TopNavComponent {
-  isSidebarOpen = false;
-
-  toggleSidebar() {
-    this.isSidebarOpen = !this.isSidebarOpen;
-  }
+  @Output() toggleSidebar = new EventEmitter<void>();
 }

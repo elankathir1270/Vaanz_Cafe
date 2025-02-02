@@ -2,11 +2,9 @@
   <div class="d-flex align-items-center">
     <i
       class="bi bi-list text-white fs-3 mr-4"
-      (click)="toggleSidebar()"
+      (click)="toggleSidebar.emit()"
       style="cursor: pointer"
     ></i>
-    <h3 class="text-white font-weight-bold m-0">V C</h3>
+    <h3 class="text-white font-weight-bold m-0">Vaanz Cafe</h3>
   </div>
 </nav>
-
-<app-side-nav [isSidebarOpen]="isSidebarOpen"></app-side-nav>

@@ -1,0 +1,50 @@
+.d-flex {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: relative;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Hide sidebar when it's closed */
+.sidebar:not(.active) {
+  width: 0;
+  overflow: hidden;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Full width when sidebar is hidden */
+.dashboard-content.collapsed {
+  margin-left: 0;
+}
+
+/* When sidebar is open, shift content */
+.dashboard-content:not(.collapsed) {
+  margin-left: 250px;
+}
+
+.bg {
+  /* background: rgb(181, 154, 203);
+  background: linear-gradient(
+    90deg,
+    rgba(181, 154, 203, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(181, 154, 203, 1) 100%
+  ); */
+  /* background: rgb(219, 197, 145);
+  background: linear-gradient(
+    90deg,
+    rgba(219, 197, 145, 1) 0%,
+    rgba(219, 197, 145, 1) 50%,
+    rgba(219, 197, 145, 1) 100%
+  ); */
+}
