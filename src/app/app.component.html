@@ -1,1 +1,14 @@
-<app-top-nav></app-top-nav>
+<app-top-nav (toggleSidebar)="toggleSidebar()"></app-top-nav>
+
+<div class="d-flex">
+  <!-- Sidebar -->
+  <app-side-nav [isSidebarOpen]="isSidebarOpen"></app-side-nav>
+
+  <!-- Dashboard -->
+  <div
+    class="dashboard-content p-3 bg"
+    [ngClass]="{ collapsed: !isSidebarOpen }"
+  >
+    <app-dashboard></app-dashboard>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+.header-card {
+  height: 100px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* background: rgb(47, 13, 93);
+  background: linear-gradient(
+    90deg,
+    rgba(47, 13, 93, 1) 0%,
+    rgba(202, 196, 207, 1) 50%,
+    rgba(47, 13, 93, 1) 100%
+  ); */
+
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(103, 98, 98, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bg {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(103, 98, 98, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.card-height {
+  height: 62px;
+}
+
+.header-text {
+  color: white;
+  font-weight: bold;
+  font-size: 4em;
+}
+.card-text {
+  font-size: 2em;
+  font-weight: bold;
+}
