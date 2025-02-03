@@ -31,20 +31,18 @@
 .dashboard-content:not(.collapsed) {
   margin-left: 250px;
 }
-
 .bg {
-  /* background: rgb(181, 154, 203);
+  /* background-image: url("/dashboard/dash_bg.jpeg");
+   background-size: contain;
+   background-repeat: repeat;
+   background-position: center;
+   background-attachment: fixed; */
+
+  background: rgb(235, 220, 186);
   background: linear-gradient(
     90deg,
-    rgba(181, 154, 203, 1) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(181, 154, 203, 1) 100%
-  ); */
-  /* background: rgb(219, 197, 145);
-  background: linear-gradient(
-    90deg,
-    rgba(219, 197, 145, 1) 0%,
-    rgba(219, 197, 145, 1) 50%,
+    rgba(235, 220, 186, 1) 0%,
+    rgba(235, 220, 186, 1) 50%,
     rgba(219, 197, 145, 1) 100%
-  ); */
+  );
 }
