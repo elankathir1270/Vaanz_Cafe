@@ -7,8 +7,9 @@
   <!-- Dashboard -->
   <div
     class="dashboard-content p-3 bg"
+    style="height: 100vh"
     [ngClass]="{ collapsed: !isSidebarOpen }"
   >
-    <app-dashboard></app-dashboard>
+    <router-outlet></router-outlet>
   </div>
 </div>
