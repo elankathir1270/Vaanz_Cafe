@@ -1,0 +1,69 @@
+.custom-btn {
+  background-color: #461e70 !important;
+  border-color: #461e70 !important;
+  color: white !important;
+}
+
+.veg-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.card-img-right {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.custom-btn {
+  background-color: #461e70;
+  border-color: #461e70;
+  color: white;
+  width: 100%;
+}
+
+.content-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background: white;
+  border-radius: 5px;
+  height: fit-content;
+  flex-wrap: wrap;
+}
+
+.content-sub-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+.sub-card-body {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+.sub-card-base {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
+  width: 100%;
+  height: 15rem;
+  max-width: 25rem;
+  border-radius: 5px;
+  flex: 0 0 auto; /* Prevent shrinking */
+}
