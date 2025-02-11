@@ -1,4 +1,9 @@
 <div class="container">
   <app-list-page-header></app-list-page-header>
-  <app-list-page-content></app-list-page-content>
+  <div *ngFor="let content of listContent">
+    <app-list-page-content
+      [title]="content.title"
+      [content]="content.content"
+    ></app-list-page-content>
+  </div>
 </div>
