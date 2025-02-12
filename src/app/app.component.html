@@ -7,8 +7,11 @@
   <!-- Dashboard -->
   <div
     class="dashboard-content p-3 bg"
-    style="height: 100vh"
-    [ngClass]="{ collapsed: !isSidebarOpen }"
+    [ngClass]="{
+      'bg-image': isHomePage,
+      bg: !isHomePage,
+      collapsed: !isSidebarOpen
+    }"
   >
     <router-outlet></router-outlet>
   </div>

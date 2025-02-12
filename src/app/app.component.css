@@ -20,6 +20,7 @@
 .dashboard-content {
   flex-grow: 1;
   transition: margin-left 0.3s ease-in-out;
+  height: 100%;
 }
 
 /* Full width when sidebar is hidden */
@@ -31,13 +32,14 @@
 .dashboard-content:not(.collapsed) {
   margin-left: 250px;
 }
+.bg-image {
+  background-image: url("/dashboard/dash_bg.jpeg");
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
 .bg {
-  /* background-image: url("/dashboard/dash_bg.jpeg");
-   background-size: contain;
-   background-repeat: repeat;
-   background-position: center;
-   background-attachment: fixed; */
-
   background: rgb(235, 220, 186);
   background: linear-gradient(
     90deg,
