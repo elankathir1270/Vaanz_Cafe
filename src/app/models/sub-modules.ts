@@ -1,6 +1,6 @@
 export interface SubModuleList {
   title: string;
-  isScroll: boolean;
+  src: string;
   headerRoute: string;
   content: SubModuleView;
 }

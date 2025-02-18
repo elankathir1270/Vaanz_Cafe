@@ -47,12 +47,10 @@
 
 .header-text {
   color: white;
-  font-weight: bold;
-  font-size: 4em;
+  font-size: 3em;
 }
 .card-text {
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 1.25em;
 }
 
 .scroll-container {

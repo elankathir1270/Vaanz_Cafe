@@ -15,13 +15,27 @@ import { CommonModule } from '@angular/common';
 export class BeveragesComponent implements OnInit {
   beverageService: BeveragesService = inject(BeveragesService);
   listContent: SubModuleList[];
+  headerContent: Partial<SubModuleList[]>;
   constructor() {}
 
   ngOnInit(): void {
     this.beverageService.getAllBeverages().subscribe({
       next: (res) => {
         this.listContent = res;
+        this.getHeaderContent(res);
       },
     });
+  }
+
+  getHeaderContent(content: SubModuleList[]) {
+    const headerContent = [];
+    content.forEach((sub) => {
+      headerContent.push({
+        title: sub.title,
+        header: sub.headerRoute,
+        src: sub.src,
+      });
+    });
+    this.headerContent = headerContent;
   }
 }
