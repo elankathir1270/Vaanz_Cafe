@@ -1,5 +1,5 @@
 <div class="container content-body shadow my-3 p-2">
-  <h4 class="m-2">{{ title }}</h4>
+  <h4 class="m-2">{{ title | uppercase }}</h4>
   <div class="container">
     <div class="content-sub-body">
       <div *ngFor="let item of items" class="sub-card-base m-2 p-1 shadow">
@@ -7,14 +7,19 @@
         <div class="sub-card-body d-flex flex-column justify-content-between">
           <div class="p-2">
             <h5 class="card-title d-flex align-items-center">
-              {{ item.name }}
+              {{ item.name | uppercase }}
             </h5>
-            <span class="d-flex flex-row">
-              <p>{{ item.isVeg ? "Veg" : "Non-Veg" }}</p>
-              <span
-                class="veg-indicator mx-1 mt-2"
-                [ngClass]="item.isVeg ? 'bg-success' : 'bg-danger'"
-              ></span>
+            <span class="d-flex flex-row align-items-center">
+              <span class="rating-badge bg-success">
+                <i class="bi bi-star-fill text-white"></i> 4.5
+              </span>
+              <span class="d-flex flex-row mx-2">
+                <p>{{ item.isVeg ? "veg" : "non-veg" }}</p>
+                <span
+                  class="veg-indicator mx-1 mt-2"
+                  [ngClass]="item.isVeg ? 'bg-success' : 'bg-danger'"
+                ></span>
+              </span>
             </span>
 
             <p class="card-text font-weight-bold">₹{{ item.prize }}</p>
