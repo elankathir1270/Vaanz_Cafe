@@ -1,19 +1,15 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 import { Dashboard } from '../models/dashboard';
+import { ApiService } from './api.service';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class DashboardService {
-  constructor(private http: HttpClient) {}
+  constructor(private apiService: ApiService) {}
 
   getDashboard() {
-    return this.http
-      .get<{ [key: string]: Dashboard }>(
-        'https://vaanz-cafe-default-rtdb.firebaseio.com/dashboard.json'
-      )
+    return this.apiService
+      .get<{ [key: string]: Dashboard }>('/dashboard.json')
       .pipe(
         map((res) => {
           const dashboard: Dashboard[] = [];
