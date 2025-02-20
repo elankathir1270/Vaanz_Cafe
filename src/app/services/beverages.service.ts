@@ -1,19 +1,15 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, tap } from 'rxjs';
+import { map } from 'rxjs';
 import { SubModuleList } from '../models/sub-modules';
+import { ApiService } from './api.service';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class BeveragesService {
-  constructor(private http: HttpClient) {}
+  constructor(private apiService: ApiService) {}
 
   getAllBeverages() {
-    return this.http
-      .get<{ [key: string]: SubModuleList }>(
-        'https://vaanz-cafe-default-rtdb.firebaseio.com/beverages.json'
-      )
+    return this.apiService
+      .get<{ [key: string]: SubModuleList }>('/beverages.json')
       .pipe(
         map((res) => {
           const listContent: SubModuleList[] = [];

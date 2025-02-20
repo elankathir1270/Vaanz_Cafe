@@ -9,4 +9,5 @@ export const environment = {
     messagingSenderId: '820365455265',
     appId: '1:820365455265:web:8870096c910dd6efca25e0',
   },
+  baseApiEndPoint: 'https://vaanz-cafe-default-rtdb.firebaseio.com',
 };
