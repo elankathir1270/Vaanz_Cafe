@@ -1,9 +1,1 @@
-<div class="container">
-  <app-list-page-header [headerList]="headerContent"></app-list-page-header>
-  <div *ngFor="let content of listContent">
-    <app-list-page-content
-      [title]="content.title"
-      [content]="content.content"
-    ></app-list-page-content>
-  </div>
-</div>
+<router-outlet></router-outlet>
