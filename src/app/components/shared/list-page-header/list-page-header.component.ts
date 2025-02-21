@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import { ScrollDirective } from '../../../directives/scroll.directive';
 import { SubModuleList } from '../../../models/sub-modules';
 import { RouterModule } from '@angular/router';

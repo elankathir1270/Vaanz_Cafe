@@ -5,7 +5,11 @@
   <!-- Scrollable Cards Inside Header -->
   <div class="scroll-container" appScroll>
     <div *ngFor="let list of headerList" class="shadow">
-      <div class="card" routerLink="{{ list.headerRoute }}">
+      <div
+        class="card"
+        [routerLink]="list.headerRoute"
+        [queryParams]="{ category: 'coffee' }"
+      >
         <div class="image-container">
           <img class="card-img-top" src="{{ list.src }}" alt="Card image cap" />
         </div>
