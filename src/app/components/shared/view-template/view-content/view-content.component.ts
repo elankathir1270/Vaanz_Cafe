@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { SubCategoryView } from '../../../../models/sub-modules';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-view-content',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './view-content.component.html',
-  styleUrl: './view-content.component.css'
+  styleUrl: './view-content.component.css',
 })
-export class ViewContentComponent {
+export class ViewContentComponent implements OnInit, OnChanges {
+  @Input() category: SubCategoryView;
 
+  ngOnInit() {}
+
+  ngOnChanges() {
+    console.log(this.category);
+  }
 }

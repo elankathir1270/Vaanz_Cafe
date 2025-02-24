@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SubModuleView } from '../../../models/sub-modules';
+import { SubCategoryView } from '../../../models/sub-modules';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class ListPageContentComponent implements OnInit {
   @Input() title: string;
-  @Input() content: SubModuleView;
-  items: SubModuleView[] = [];
+  @Input() content: SubCategoryView;
+  items: SubCategoryView[] = [];
 
   ngOnInit(): void {
     if (this.items) {
