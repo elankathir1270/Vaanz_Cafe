@@ -1,1 +1,48 @@
-<p>view-content works!</p>
+<div class="content-container">
+  <div class="content-sub-body">
+    <div class="sub-card-base shadow">
+      <!-- Image -->
+      <div class="image-container shadow">
+        <img src="{{ category.src }}" alt="Card image" class="card-img-right" />
+      </div>
+
+      <!-- Text Content -->
+      <div class="sub-card-body">
+        <!-- <div class="card-text-container">
+          <h5 class="card-title">{{ category.name | uppercase }}</h5>
+          <span class="d-flex align-items-center">
+            <span class="rating-badge bg-success">
+              <i class="bi bi-star-fill text-white"></i> 4.5
+            </span>
+            <span class="d-flex flex-row mx-2">
+              <p>{{ category.isVeg ? "Veg" : "Non-Veg" }}</p>
+              <span
+                class="veg-indicator"
+                [ngClass]="category.isVeg ? 'bg-success' : 'bg-danger'"
+              ></span>
+            </span>
+          </span>
+          <p class="card-text font-weight-bold">₹{{ category.prize }}</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div> -->
+
+        <!-- Stock & Button -->
+        <!-- <div class="card-footer">
+          <span
+            class="badge"
+            [ngClass]="category.inStock ? 'bg-success' : 'bg-danger'"
+            >{{ category.inStock ? "In Stock" : "Out of Stock" }}</span
+          >
+          <button
+            class="btn"
+            [ngClass]="category.inStock ? 'custom-btn' : 'btn-dark'"
+          >
+            {{ category.inStock ? "Add" : "Notify" }}
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

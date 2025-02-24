@@ -1,1 +1,17 @@
-<app-list-page-header></app-list-page-header>
+<div class="parent-container">
+  <app-list-page-header
+    [headerType]="'sub-category'"
+    [subCategoryHeader]="varieties"
+    [headerTitle]="categoryTitle"
+    (getCategory)="getCategory($event, 'sub-category')"
+  ></app-list-page-header>
+  <div class="container main-container my-3 p-0 shadow">
+    <app-view-content
+      [category]="category"
+      class="app-view-content"
+    ></app-view-content>
+    <app-view-sub-content
+      class="app-view-sub-content shadow"
+    ></app-view-sub-content>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  flex: 1; /* Take the remaining space after the header */
+  display: flex;
+  flex-direction: row;
+}
+
+.app-view-content {
+  flex: 7; /* 70% width */
+  height: 52vh;
+  margin-right: 3px;
+}
+
+.app-view-sub-content {
+  flex: 3; /* 30% width */
+  height: 52vh;
+  border: 1px solid black;
+  margin-left: 3px;
+  border-radius: 5px;
+}
