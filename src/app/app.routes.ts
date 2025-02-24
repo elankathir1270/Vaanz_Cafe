@@ -19,6 +19,16 @@ export const routes: Routes = [
         component: BeveragesCategoriesComponent,
         title: 'beverages categories',
       },
+      {
+        path: 'cold-beverages',
+        component: BeveragesCategoriesComponent,
+        title: 'beverages categories',
+      },
+      {
+        path: 'tea',
+        component: BeveragesCategoriesComponent,
+        title: 'beverages categories',
+      },
     ],
   },
   { path: 'desserts', component: DessertsComponent },

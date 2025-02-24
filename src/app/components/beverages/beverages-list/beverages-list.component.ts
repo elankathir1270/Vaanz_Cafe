@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BeveragesService } from '../../../services/beverages.service';
-import { SubModuleList } from '../../../models/sub-modules';
+import { SubCategoryList, SubCategoryView } from '../../../models/sub-modules';
 import { ListPageHeaderComponent } from '../../shared/list-page-header/list-page-header.component';
 import { ListPageContentComponent } from '../../shared/list-page-content/list-page-content.component';
 @Component({
@@ -19,8 +19,8 @@ import { ListPageContentComponent } from '../../shared/list-page-content/list-pa
 })
 export class BeveragesListComponent implements OnInit {
   beverageService: BeveragesService = inject(BeveragesService);
-  listContent: SubModuleList[];
-  headerContent: Partial<SubModuleList[]>;
+  listContent: SubCategoryList[];
+  headerContent: Partial<SubCategoryView[]>;
   constructor() {}
   ngOnInit(): void {
     this.beverageService.getAllBeverages().subscribe({
@@ -31,7 +31,7 @@ export class BeveragesListComponent implements OnInit {
     });
   }
 
-  getHeaderContent(content: SubModuleList[]) {
+  getHeaderContent(content: SubCategoryList[]) {
     const headerContent = [];
     content.forEach((sub) => {
       headerContent.push({

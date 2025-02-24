@@ -1,11 +1,13 @@
-export interface SubModuleList {
+export type HeaderType = 'category' | 'sub-category';
+
+export interface SubCategoryList {
   title: string;
   src: string;
   headerRoute: string;
-  content: SubModuleView;
+  content: SubCategoryView;
 }
 
-export interface SubModuleView {
+export interface SubCategoryView {
   id: number;
   name: string;
   prize: number;
@@ -13,4 +15,6 @@ export interface SubModuleView {
   inStock: boolean;
   description: string;
   src: string;
+  title?: string;
+  headerRoute?: string;
 }
