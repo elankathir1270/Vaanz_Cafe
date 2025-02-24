@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
-import { SubModuleList } from '../models/sub-modules';
+import { SubCategoryList, SubCategoryView } from '../models/sub-modules';
 import { ApiService } from './api.service';
 
 @Injectable()
@@ -9,15 +9,30 @@ export class BeveragesService {
 
   getAllBeverages() {
     return this.apiService
-      .get<{ [key: string]: SubModuleList }>('/beverages.json')
+      .get<{ [key: string]: SubCategoryList }>('/beverages.json')
       .pipe(
         map((res) => {
-          const listContent: SubModuleList[] = [];
+          const listContent: SubCategoryList[] = [];
 
           for (let key in res) {
             listContent.push({ ...res[key] });
           }
           return listContent;
+        })
+      );
+  }
+
+  getBeverageCategory(category: string) {
+    return this.apiService
+      .get<SubCategoryList>(`/beverages/${category}.json`)
+      .pipe(
+        map((res) => {
+          const viewList: SubCategoryView[] = [];
+
+          for (let key in res.content) {
+            viewList.push({ ...res.content[key] });
+          }
+          return viewList;
         })
       );
   }
