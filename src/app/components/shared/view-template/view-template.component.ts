@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { ListPageHeaderComponent } from '../list-page-header/list-page-header.component';
 import { SubCategoryView } from '../../../models/sub-modules';
 import { ViewContentComponent } from './view-content/view-content.component';
@@ -14,10 +14,14 @@ import { ViewSubContentComponent } from './view-sub-content/view-sub-content.com
   templateUrl: './view-template.component.html',
   styleUrl: './view-template.component.css',
 })
-export class ViewTemplateComponent implements OnInit {
+export class ViewTemplateComponent implements OnInit, OnChanges {
   @Input() varieties: SubCategoryView[];
   @Input() categoryTitle: string;
   category: SubCategoryView;
+
+  ngOnChanges() {
+    this.category = this.varieties[0];
+  }
 
   ngOnInit() {}
 
@@ -25,6 +29,5 @@ export class ViewTemplateComponent implements OnInit {
     if (type === 'sub-category') {
       this.category = category;
     }
-    //console.log(category);
   }
 }

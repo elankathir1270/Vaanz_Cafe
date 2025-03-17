@@ -34,10 +34,11 @@
 
 .sub-card-body {
   flex: 1;
-  padding-left: 1rem;
+  padding: 1rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: start;
 }
 
 .card-text-container {
@@ -54,4 +55,29 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
+  width: 100%;
+}
+
+.rating-badge {
+  font-size: 0.9rem;
+  padding: 3px 6px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: fit-content;
+  border-radius: 5px;
+  color: white;
+}
+.veg-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+.custom-btn {
+  background-color: #461e70 !important;
+  border-color: #461e70 !important;
+  color: white !important;
+  width: 100px;
 }

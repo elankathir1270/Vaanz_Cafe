@@ -8,28 +8,37 @@
 
       <!-- Text Content -->
       <div class="sub-card-body">
-        <!-- <div class="card-text-container">
+        <div class="card-text-container">
           <h5 class="card-title">{{ category.name | uppercase }}</h5>
-          <span class="d-flex align-items-center">
+          <span class="d-flex align-items-center m-2">
             <span class="rating-badge bg-success">
               <i class="bi bi-star-fill text-white"></i> 4.5
             </span>
             <span class="d-flex flex-row mx-2">
               <p>{{ category.isVeg ? "Veg" : "Non-Veg" }}</p>
               <span
-                class="veg-indicator"
+                class="veg-indicator mx-1 mt-2"
                 [ngClass]="category.isVeg ? 'bg-success' : 'bg-danger'"
               ></span>
             </span>
           </span>
           <p class="card-text font-weight-bold">₹{{ category.prize }}</p>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <span>Ingredients</span>
+          <p class="description font-weight-bold">
+            Lorem ipsum dolor | sit amet consectetur | adipisicing elit | quos
+            neque cupiditate | cumque quibusdam optio.
           </p>
-        </div> -->
+          <span>Description</span>
+          <p class="description font-weight-bold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quos,
+            neque cupiditate, cumque quibusdam optio necessitatibus inventore
+            laborum quasi aliquid ipsam ducimus? Quo debitis nemo libero earum
+            consequuntur. Sed, nostrum.
+          </p>
+        </div>
 
         <!-- Stock & Button -->
-        <!-- <div class="card-footer">
+        <div class="card-footer">
           <span
             class="badge"
             [ngClass]="category.inStock ? 'bg-success' : 'bg-danger'"
@@ -41,7 +50,7 @@
           >
             {{ category.inStock ? "Add" : "Notify" }}
           </button>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
