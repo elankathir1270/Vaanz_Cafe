@@ -11,9 +11,6 @@ import { CommonModule } from '@angular/common';
 export class ViewContentComponent implements OnInit, OnChanges {
   @Input() category: SubCategoryView;
 
+  ngOnChanges() {}
   ngOnInit() {}
-
-  ngOnChanges() {
-    console.log(this.category);
-  }
 }
